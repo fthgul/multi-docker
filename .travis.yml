@@ -8,7 +8,7 @@ before_install:
 script:
   - docker run fatiheng06/react-test npm test -- --coverage
 
-after_succes:
+after_success:
   - docker build -t fatiheng06/multi-client ./client
   - docker build -t fatiheng06/multi-nginx ./nginx
   - docker build -t fatiheng06/multi-server ./server
